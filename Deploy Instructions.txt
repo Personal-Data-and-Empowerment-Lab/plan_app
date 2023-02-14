@@ -1,0 +1,41 @@
+# For reference, https://flutter.dev/docs/deployment/ios
+
+1) Make sure app is working appropriately
+
+2) Update pubspec.yaml build number to be higher than any previous version
+
+3) run `flutter build ios` or `fvm flutter build ios` if using fvm
+
+4) Close Xcode if it is open
+
+5) Right click the /ios directory in Flutter
+
+6) Select Flutter > "Open in Xcode" or whatever it is
+
+7) Select Runner and make sure the settings are correct
+    - change name as needed (to "Plan")
+    - update build number to match pubspec.yaml
+
+8) Make sure Product > Scheme > Runner is checked and
+             Product > Destination is set to > Any iOS Device
+
+9) Select Product > Archive
+
+10) Once it's finished, click the Validate App button
+
+11) Once it's finished validating, click the Distribute App Button
+
+12) Once that's finished, wait for an email (could take a while like 30 minutes) that says it was successful
+
+# Android
+1) `(fvm) flutter build appbundle`
+    - should end up in build/app/outputs/bundle/release/app.aab
+
+2) upload to new release on google play store developer console
+
+# GitHub
+1) Commit changes
+
+2) Merge into master branch with PR. Label with build number.
+
+3) Update README.md to have latest update date
